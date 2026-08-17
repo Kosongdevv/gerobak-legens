@@ -20,6 +20,29 @@ config/icon="res://icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[input]
+
+ui_kiri={
+"deadzone": 0.2,
+"events": [null]
+}
+ui_kanan={
+"deadzone": 0.2,
+"events": []
+}
+ui_depan(atas)={
+"deadzone": 0.2,
+"events": []
+}
+ui_belakang(bawah)={
+"deadzone": 0.2,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
