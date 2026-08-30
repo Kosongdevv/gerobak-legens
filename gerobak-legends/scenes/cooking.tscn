@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dsbl4iloe6gcg"]
+
+[ext_resource type="Texture2D" uid="uid://chkllr5lgtre4" path="res://assets/display/displayrecipes.png" id="1_2iow3"]
+[ext_resource type="Script" uid="uid://bbf5vqwekoo8f" path="res://scripts/cooking.gd" id="1_58wjq"]
+[ext_resource type="Texture2D" uid="uid://cwju4mcty6di7" path="res://assets/display/displaypresseecipes.png" id="2_xian5"]
+[ext_resource type="Texture2D" uid="uid://crpian2a76i2x" path="res://assets/baksosprite/baksobiasa.png" id="3_wuimh"]
+[ext_resource type="Texture2D" uid="uid://bar01m5lhnaox" path="res://assets/baksosprite/bakso pedas.png" id="4_wuimh"]
+[ext_resource type="Texture2D" uid="uid://bjkajjtwxexcr" path="res://assets/baksosprite/baksokomplit.png" id="5_58wjq"]
+[ext_resource type="Texture2D" uid="uid://b3gvd2wux5pci" path="res://assets/display/quit.png" id="7_p08t8"]
+[ext_resource type="Texture2D" uid="uid://bijnp5celscfs" path="res://assets/display/quitpress.png" id="8_o2php"]
+
+[node name="cooking" type="Node2D" unique_id=1074664041]
+script = ExtResource("1_58wjq")
+metadata/_edit_horizontal_guides_ = [821.0]
+
+[node name="selection" type="Node2D" parent="." unique_id=63002690]
+
+[node name="baksobiasa" type="TouchScreenButton" parent="selection" unique_id=93343043]
+position = Vector2(145, 137)
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("1_2iow3")
+texture_pressed = ExtResource("2_xian5")
+
+[node name="baksosp" type="Sprite2D" parent="selection/baksobiasa" unique_id=1305972787]
+position = Vector2(32, 41)
+scale = Vector2(0.9, 0.983)
+texture = ExtResource("3_wuimh")
+
+[node name="Label" type="Label" parent="selection/baksobiasa" unique_id=831646098]
+custom_minimum_size = Vector2(20, 5)
+offset_left = 6.571428
+offset_top = 6.5714264
+offset_right = 57.571426
+offset_bottom = 18.571426
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 8
+text = "-bakso biasa-"
+metadata/_edit_use_anchors_ = true
+
+[node name="baksopedas" type="TouchScreenButton" parent="selection" unique_id=284756542]
+position = Vector2(470, 137)
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("1_2iow3")
+texture_pressed = ExtResource("2_xian5")
+
+[node name="baksosp" type="Sprite2D" parent="selection/baksopedas" unique_id=1434453338]
+position = Vector2(32, 41)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_wuimh")
+
+[node name="Label" type="Label" parent="selection/baksopedas" unique_id=817643870]
+offset_left = 7.1428614
+offset_top = 6.0
+offset_right = 73.14286
+offset_bottom = 17.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_font_sizes/font_size = 7
+text = "-bakso pedas-"
+
+[node name="baksokomplit" type="TouchScreenButton" parent="selection" unique_id=1356352302]
+position = Vector2(800, 137)
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("1_2iow3")
+texture_pressed = ExtResource("2_xian5")
+
+[node name="baksosp" type="Sprite2D" parent="selection/baksokomplit" unique_id=1352569213]
+position = Vector2(32, 41)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_58wjq")
+
+[node name="Label" type="Label" parent="selection/baksokomplit" unique_id=862774777]
+offset_left = 5.9999995
+offset_top = 5.4285707
+offset_right = 59.0
+offset_bottom = 16.42857
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 7
+text = "-bakso komplit-"
+
+[node name="quit" type="TouchScreenButton" parent="selection" unique_id=1565386506]
+position = Vector2(1031, 0)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("7_p08t8")
+texture_pressed = ExtResource("8_o2php")
+
+[node name="Label" type="Label" parent="." unique_id=1379033341]
+offset_right = 463.0
+offset_bottom = 91.0
+
+[connection signal="released" from="selection/baksobiasa" to="." method="_on_baksobiasa_tekan"]
+[connection signal="released" from="selection/baksopedas" to="." method="_on_baksopedas_tekan"]
+[connection signal="released" from="selection/baksokomplit" to="." method="_on_baksokomplit_tekan"]
+[connection signal="released" from="selection/quit" to="." method="_on_quit_press"]

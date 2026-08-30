@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dx2qyi2splt1b"]
+
+[ext_resource type="Theme" uid="uid://b0jevhpxfpfqi" path="res://Theme.tres" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://cr6an3h385vre" path="res://scripts/main_menu.gd" id="2_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=1903349287]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_06t4h")
+script = ExtResource("2_7vrkn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=125401620]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 650.0
+color = Color(0.57868254, 0.30263177, 0.30061793, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1847878782]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.133
+anchor_top = 0.185
+anchor_right = 0.133
+anchor_bottom = 0.185
+offset_left = 243.784
+offset_top = 203.12
+offset_right = 625.784
+offset_bottom = 434.12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1695442054]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 34.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Panel/VBoxContainer" unique_id=497969699]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+
+[node name="Options" type="Button" parent="Panel/VBoxContainer" unique_id=1941880482]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=296198493]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=1782509317]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_right = 0.505
+offset_left = -419.76
+offset_top = 69.0
+offset_right = 420.24
+offset_bottom = 296.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 79
+text = "GEROBAK LEGENDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resetbutoon" type="Button" parent="." unique_id=902506806]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 170.0
+grow_vertical = 0
+text = "reset"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="resetbutoon" to="." method="_on_resetbutoon_pressed"]

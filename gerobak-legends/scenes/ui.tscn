@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://du3ngel7de5xb"]
+
+[ext_resource type="Texture2D" uid="uid://bbcrkxf1xlej5" path="res://assets/Dpad/up.png" id="1_x4jx1"]
+[ext_resource type="Texture2D" uid="uid://gglq87uwle6u" path="res://assets/Dpad/pressup.png" id="2_yev5y"]
+[ext_resource type="Texture2D" uid="uid://cmelmxcgchbv7" path="res://assets/Dpad/down.png" id="3_ktti3"]
+[ext_resource type="Texture2D" uid="uid://dh4ypfmvh0k8v" path="res://assets/Dpad/pressdown.png" id="4_cgfq5"]
+[ext_resource type="Texture2D" uid="uid://r7anflkp5qup" path="res://assets/Dpad/left.png" id="5_7dvkv"]
+[ext_resource type="Texture2D" uid="uid://c7o6vdmxc6um1" path="res://assets/Dpad/pressleft.png" id="6_vdcm2"]
+[ext_resource type="Texture2D" uid="uid://tew8v3c7cyw5" path="res://assets/Dpad/right.png" id="7_6rmj2"]
+[ext_resource type="Texture2D" uid="uid://bapqp10msnc72" path="res://assets/Dpad/pressright.png" id="8_vsj0x"]
+[ext_resource type="Texture2D" uid="uid://6t42o1e6e5ha" path="res://assets/display/displaymoney.png" id="9_cgfq5"]
+[ext_resource type="FontFile" uid="uid://rabv7lwoy5y2" path="res://assets/Font/Peaberry Base/PeaberryBase.woff" id="10_7dvkv"]
+[ext_resource type="Script" uid="uid://bpux58mrcfl37" path="res://scripts/game scene/uangdisplay.gd" id="11_6rmj2"]
+[ext_resource type="Texture2D" uid="uid://of48khn5vh22" path="res://assets/display/uang.png" id="12_6rmj2"]
+
+[node name="Ui" type="Control" unique_id=813734110]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 8.0
+offset_right = -1123.0
+offset_bottom = -640.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="atas" type="TouchScreenButton" parent="." unique_id=87692106]
+position = Vector2(90, 300)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_x4jx1")
+texture_pressed = ExtResource("2_yev5y")
+action = "ui_depan(atas)"
+
+[node name="bawah" type="TouchScreenButton" parent="." unique_id=1222759598]
+position = Vector2(90, 475)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("3_ktti3")
+texture_pressed = ExtResource("4_cgfq5")
+action = "ui_belakang(bawah)"
+
+[node name="kiri" type="TouchScreenButton" parent="." unique_id=1425245878]
+position = Vector2(0, 387)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_7dvkv")
+texture_pressed = ExtResource("6_vdcm2")
+action = "ui_kiri"
+
+[node name="kanan" type="TouchScreenButton" parent="." unique_id=1387814504]
+position = Vector2(180, 387)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_6rmj2")
+texture_pressed = ExtResource("8_vsj0x")
+action = "ui_kanan"
+
+[node name="display" type="Sprite2D" parent="." unique_id=637471937]
+position = Vector2(133, 60)
+scale = Vector2(3, 3)
+texture = ExtResource("9_cgfq5")
+
+[node name="money" type="Label" parent="display" unique_id=1255939687]
+offset_left = -14.666667
+offset_top = -7.3333325
+offset_right = 41.33334
+offset_bottom = 11.0
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("10_7dvkv")
+theme_override_font_sizes/font_size = 14
+text = "0"
+vertical_alignment = 1
+script = ExtResource("11_6rmj2")
+
+[node name="coin" type="Sprite2D" parent="display" unique_id=1423042447]
+position = Vector2(-32.999996, -0.66666746)
+scale = Vector2(1.3916667, 1.3500001)
+texture = ExtResource("12_6rmj2")
