@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0eya46aniae"
-path="res://.godot/imported/base.png-03425f446c9e938e6abc19b9a378bb50.ctex"
+uid="uid://b57gwnamfquky"
+path="res://.godot/imported/gerobak_back.png-3ef5f4295cdfc8f612af4a5551840f52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/base.png"
-dest_files=["res://.godot/imported/base.png-03425f446c9e938e6abc19b9a378bb50.ctex"]
+source_file="res://assets/gerobak/gerobak_back.png"
+dest_files=["res://.godot/imported/gerobak_back.png-3ef5f4295cdfc8f612af4a5551840f52.ctex"]
 
 [params]
 

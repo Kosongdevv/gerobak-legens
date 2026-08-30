@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0eya46aniae"
-path="res://.godot/imported/base.png-03425f446c9e938e6abc19b9a378bb50.ctex"
+uid="uid://crpian2a76i2x"
+path="res://.godot/imported/baksobiasa.png-4549c2a99a3c563bd8cb15329dc2fb96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/base.png"
-dest_files=["res://.godot/imported/base.png-03425f446c9e938e6abc19b9a378bb50.ctex"]
+source_file="res://assets/baksosprite/baksobiasa.png"
+dest_files=["res://.godot/imported/baksobiasa.png-4549c2a99a3c563bd8cb15329dc2fb96.ctex"]
 
 [params]
 
