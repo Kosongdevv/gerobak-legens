@@ -1,8 +1,22 @@
 [gd_scene format=3 uid="uid://hjqftafpt03r"]
 
+[ext_resource type="Script" uid="uid://ddndixc821itx" path="res://scripts/playerscript.gd" id="1_iywne"]
 [ext_resource type="Texture2D" uid="uid://bowgxcha4rluv" path="res://assets/tukang_bakso_sprite_sheet.png" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bjqnvh7mwj3ni" path="res://assets/Untitled64_20260816111619.png" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://ck54p3qhtj3j3" path="res://assets/Untitled65_20260816132830.png" id="3_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://lia8tip6kikg" path="res://icon.svg" id="5_iywne"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7b7a"]
+radius = 2200001.0
+height = 9400000.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
+atlas = ExtResource("1_uwrxv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
+atlas = ExtResource("2_lnu2h")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
 atlas = ExtResource("1_uwrxv")
@@ -52,15 +66,37 @@ region = Rect2(64, 64, 32, 32)
 atlas = ExtResource("1_uwrxv")
 region = Rect2(96, 64, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
+atlas = ExtResource("3_lbhrr")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
+atlas = ExtResource("3_lbhrr")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
+atlas = ExtResource("3_lbhrr")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
+atlas = ExtResource("3_lbhrr")
+region = Rect2(96, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_mwb40"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.7,
+"texture": SubResource("AtlasTexture_iywne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p57ef")
+}],
 "loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_e2o6t")
 }, {
 "duration": 1.0,
@@ -110,21 +146,63 @@ animations = [{
 "name": &"kekanan",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5sy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gee14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tnpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtaks")
+}],
 "loop": 1,
 "name": &"kekiri",
 "speed": 5.0
 }]
 
 [node name="Game" type="Node2D" unique_id=1354264517]
-
-[node name="player" type="Node2D" parent="." unique_id=1561254817]
+scale = Vector2(1e-05, 1e-05)
+skew = -0.05235988
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=683712892]
+position = Vector2(452, 244)
+script = ExtResource("1_iywne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=674324724]
+position = Vector2(8199548, 10999756)
 shape = SubResource("CapsuleShape2D_g7b7a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=737582758]
+position = Vector2(8099548, 11699756)
+scale = Vector2(-319385.38, -250534.27)
 sprite_frames = SubResource("SpriteFrames_mwb40")
-animation = &"idle"
+animation = &"kebelakang"
+frame_progress = 0.38077125
+flip_v = true
+
+[node name="atas" type="TouchScreenButton" parent="CharacterBody2D" unique_id=2051691692]
+position = Vector2(-58288696, 5507304)
+scale = Vector2(74767.63, 62864.176)
+texture_normal = ExtResource("5_iywne")
+action = "ui_depan(atas)"
+
+[node name="bawah" type="TouchScreenButton" parent="CharacterBody2D/atas" unique_id=239041218]
+position = Vector2(6.4538155, 302.03513)
+texture_normal = ExtResource("5_iywne")
+action = "ui_belakang(bawah)"
+
+[node name="kiri" type="TouchScreenButton" parent="CharacterBody2D/atas" unique_id=1473008003]
+position = Vector2(-131.22687, 160.56143)
+texture_normal = ExtResource("5_iywne")
+action = "ui_kiri"
+
+[node name="kanan" type="TouchScreenButton" parent="CharacterBody2D/atas" unique_id=1277565314]
+position = Vector2(141.98325, 152.70178)
+texture_normal = ExtResource("5_iywne")
+action = "ui_kanan"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1047325492]

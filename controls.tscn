@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://clvydcgtfamlt"]
+
+[ext_resource type="Texture2D" uid="uid://dhfvhe7rpt0oq" path="res://assets/base.png" id="1_qo8cm"]
+[ext_resource type="Texture2D" uid="uid://c6co1bufhwdc2" path="res://assets/knob.png" id="2_xwvqn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqkgv"]
+radius = 90.0
+
+[node name="Controls" type="CanvasLayer" unique_id=925432277]
+
+[node name="Joystick" type="TouchScreenButton" parent="." unique_id=997605518]
+position = Vector2(150, 500)
+scale = Vector2(0.504, 0.4739999)
+texture_normal = ExtResource("1_qo8cm")
+texture_pressed = ExtResource("2_xwvqn")
+shape = SubResource("CircleShape2D_hqkgv")
+passby_press = true
+action = "ui_kiri,ui_kanan,ui_depan(atas),ui_belakang(bawah)ui_kanan"

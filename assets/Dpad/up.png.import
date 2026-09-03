@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkn1w5ld63jdi"
-path="res://.godot/imported/tukang_bakso_sprite_sheet.png-08e5a7704aef017b2679d02ebb26ee88.ctex"
+uid="uid://bl7w8n5p0lcco"
+path="res://.godot/imported/up.png-4bbfc02828656446d52b4e7d10c2948c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tukang_bakso_sprite_sheet.png"
-dest_files=["res://.godot/imported/tukang_bakso_sprite_sheet.png-08e5a7704aef017b2679d02ebb26ee88.ctex"]
+source_file="res://assets/Dpad/up.png"
+dest_files=["res://.godot/imported/up.png-4bbfc02828656446d52b4e7d10c2948c.ctex"]
 
 [params]
 
