@@ -27,4 +27,3 @@ func _on_upgrade_pressed() -> void:
 		text = "Uang Tidak Cukup!"
 		await get_tree().create_timer(1.0).timeout
 		_update_cost_and_ui()
-
