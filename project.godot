@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://4wjjina1jhx"
+InventoriManager="*uid://d0jngan6tdwty"
 
 [display]
 
@@ -43,6 +44,10 @@ ui_depan(atas)={
 "events": []
 }
 ui_belakang(bawah)={
+"deadzone": 0.2,
+"events": []
+}
+ui_interact={
 "deadzone": 0.2,
 "events": []
 }

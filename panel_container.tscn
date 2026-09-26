@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bl8vdqe3oj76o"]
+
+[ext_resource type="Script" uid="uid://d0jngan6tdwty" path="res://scripts/InventoriManager.gd" id="1_x66kw"]
+[ext_resource type="Script" uid="uid://dpir162hvvm4p" path="res://scripts/InventoriUIgd.gd" id="1_yg2wv"]
+[ext_resource type="Script" uid="uid://cc548gi16pox8" path="res://scripts/ItemSlot.gd" id="3_vh14v"]
+[ext_resource type="Texture2D" uid="uid://lt1jo66ct22e" path="res://assets/ui_atlas.png" id="3_yg2wv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7b7a"]
+atlas = ExtResource("3_yg2wv")
+region = Rect2(10.977, 46.893, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyc6d"]
+atlas = ExtResource("3_yg2wv")
+region = Rect2(10.977, 49.893, 10, 10)
+
+[node name="PanelContainer" type="Control" unique_id=1842312775]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 111.0
+offset_bottom = 81.0
+script = ExtResource("1_yg2wv")
+
+[node name="Control" type="PanelContainer" parent="." unique_id=640534166]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 81.0
+script = ExtResource("1_x66kw")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1320957808]
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 80.0
+columns = 5
+
+[node name="slot" type="Button" parent="GridContainer" unique_id=1228899912]
+layout_mode = 2
+icon = SubResource("AtlasTexture_g7b7a")
+script = ExtResource("3_vh14v")
+
+[node name="slot2" type="Button" parent="GridContainer" unique_id=1693265442]
+layout_mode = 2
+icon = SubResource("AtlasTexture_gyc6d")
+script = ExtResource("3_vh14v")
+
+[node name="slot3" type="Button" parent="GridContainer" unique_id=169119824]
+layout_mode = 2
+icon = SubResource("AtlasTexture_g7b7a")
+script = ExtResource("3_vh14v")
+
+[node name="slot4" type="Button" parent="GridContainer" unique_id=1540488624]
+layout_mode = 2
+icon = SubResource("AtlasTexture_g7b7a")
+script = ExtResource("3_vh14v")
+
+[node name="slot5" type="Button" parent="GridContainer" unique_id=1545672021]
+layout_mode = 2
+icon = SubResource("AtlasTexture_g7b7a")
+script = ExtResource("3_vh14v")

@@ -9,9 +9,17 @@ var waktutunggu : float = 3.0
 
 func mbaksok() -> bool:
 	for item in baksok:
-		if bahan[item] < baksok[item]:
-			print("bahan kurang !!")
+		
+		if not bahan.has(item):
+			print("Bahan ", item, " habis!")
 			return false
+
+		if bahan[item] < baksok[item]:
+			print("Bahan kurang !!")
+			return false
+			
+	return true
+
 		
 	$selection.visible = false
 	for item in baksok:
@@ -23,9 +31,14 @@ func mbaksok() -> bool:
 
 
 func mbaksop() -> bool:
-	for item in baksop:
+	for item in baksok:
+		
+		if not bahan.has(item):
+			print("Bahan ", item, " habis!")
+			return false
+
 		if bahan[item] < baksop[item]:
-			print("bahan kurang")
+			print("Bahan kurang !!")
 			return false
 
 	$selection.visible = false
@@ -38,9 +51,14 @@ func mbaksop() -> bool:
 
 
 func mbaksob() -> bool:
-	for item in baksob:
+	for item in baksok:
+		
+		if not bahan.has(item):
+			print("Bahan ", item, " habis!")
+			return false
+
 		if bahan[item] < baksob[item]:
-			print("bahan kurang!!")
+			print("Bahan kurang !!")
 			return false
 	
 	$selection.visible = false # ngilangin ui pilihan
@@ -59,7 +77,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _proses(_delta: float) -> void:
 	$Label.text = str(GameManager.bahan) + "\n" + str(GameManager.bakso)
 	pass
 	
