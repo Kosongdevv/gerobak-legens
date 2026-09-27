@@ -6,9 +6,13 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
-	var input_vector: Vector2 = Input.get_vector("ui_kiri","ui_kanan","ui_depan(atas)","ui_belakang(bawah)")
-	
-	if input_vector !=Vector2.ZERO:
+	var input_vector: Vector2 = Input.get_vector("ui_kiri", "ui_kanan", "ui_depan(atas)", "ui_belakang(bawah)")
+
+	# Keyboard fallback untuk testing di PC. D-pad asli tetap dipakai di HP.
+	if input_vector == Vector2.ZERO:
+		input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+
+	if input_vector != Vector2.ZERO:
 		input_vector = input_vector.normalized()
 		velocity = velocity.move_toward(input_vector * speed, accel * delta)
 	else:
@@ -22,9 +26,9 @@ func update_animation(input_vector: Vector2) -> void:
 		
 		if abs(input_vector.x) >= abs(input_vector.y):
 			if input_vector.x > 0:
-				animated_sprite.play("kekiri")
-			else:
 				animated_sprite.play("kekanan")
+			else:
+				animated_sprite.play("kekiri")
 		else:
 			if input_vector.y > 0:
 				animated_sprite.play("kedepan")

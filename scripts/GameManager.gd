@@ -18,7 +18,8 @@ var bahan: Dictionary = {
 	"stok_kecap": 20,
 	"stok_saos": 20,
 	"stok_bihun": 20,
-	"stok_pangsit": 20
+	"stok_pangsit": 20,
+	"stok_pangsit_basah": 20
 }
 
 # Furniture dipisah biar slot bahan gak penuh

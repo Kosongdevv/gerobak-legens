@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dx2qyi2splt1b"]
 
 [ext_resource type="Theme" uid="uid://b0jevhpxfpfqi" path="res://Theme.tres" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://dgny52sr12ufm" path="res://scripts/main_menu.gd" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://cr6an3h385vre" path="res://scripts/main_menu.gd" id="2_7vrkn"]
 
 [node name="MainMenu" type="Control" unique_id=1903349287]
 layout_mode = 3
@@ -45,7 +45,6 @@ grow_vertical = 2
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
-offset_transform_enabled = true
 text = "Play"
 
 [node name="Options" type="Button" parent="Panel/VBoxContainer" unique_id=1941880482]
@@ -77,5 +76,16 @@ text = "GEROBAK LEGENDS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="resetbutoon" type="Button" parent="." unique_id=902506806]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 170.0
+grow_vertical = 0
+text = "reset"
+
 [connection signal="pressed" from="Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="resetbutoon" to="." method="_on_resetbutoon_pressed"]
