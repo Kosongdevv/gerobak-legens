@@ -15,58 +15,10 @@ run/main_scene="uid://dx2qyi2splt1b"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-GameManager="*uid://4wjjina1jhx"
-InventoriManager="*uid://d0jngan6tdwty"
-
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[editor_plugins]
-
-enabled=PackedStringArray()
-
-[input]
-
-ui_kiri={
-"deadzone": 0.2,
-"events": [null]
-}
-ui_kanan={
-"deadzone": 0.2,
-"events": []
-}
-ui_depan(atas)={
-"deadzone": 0.2,
-"events": []
-}
-ui_belakang(bawah)={
-"deadzone": 0.2,
-"events": []
-}
-ui_interact={
-"deadzone": 0.2,
-"events": []
-}
-ui_left={
-"deadzone": 0.2,
-"events": [Object(InputEventKey,"physical_keycode":65), Object(InputEventKey,"physical_keycode":4194311)]
-}
-ui_right={
-"deadzone": 0.2,
-"events": [Object(InputEventKey,"physical_keycode":68), Object(InputEventKey,"physical_keycode":4194313)]
-}
-ui_up={
-"deadzone": 0.2,
-"events": [Object(InputEventKey,"physical_keycode":87), Object(InputEventKey,"physical_keycode":4194320)]
-}
-ui_down={
-"deadzone": 0.2,
-"events": [Object(InputEventKey,"physical_keycode":83), Object(InputEventKey,"physical_keycode":4194322)]
-}
 
 [physics]
 
